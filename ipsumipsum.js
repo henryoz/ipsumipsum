@@ -1,17 +1,25 @@
-if (Meteor.isClient) {
-  // counter starts at 0
-  Session.setDefault('counter', 0);
+Ipsums = new Mongo.Collection("ipsums");
 
-  Template.hello.helpers({
-    counter: function () {
-      return Session.get('counter');
+if (Meteor.isClient) {
+
+  Template.ipsums.helpers({
+    ipsums: function () {
+      return Ipsums.find({}, );
     }
   });
 
-  Template.hello.events({
-    'click button': function () {
-      // increment the counter when button is clicked
-      Session.set('counter', Session.get('counter') + 1);
+  Template.ipsumForm.events({
+    'submit .ipsum': function(e) {
+      e.preventDefault();
+      var text = e.target.text.value;
+      
+      Ipsums.insert({
+        text: JSON.stringify(text),
+        createdAt: new Date()
+      });
+
+      e.target.text.value = '';
+
     }
   });
 }

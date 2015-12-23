@@ -3,12 +3,19 @@
 </head>
 
 <body>
-  <h1>Welcome to Meteor!</h1>
+  <h1>ipsumipsum</h1>
+  <h2>An ipsum generator generator!</h2>
 
-  {{> hello}}
+  {{> ipsumForm}}
 </body>
 
-<template name="hello">
-  <button>Click Me</button>
-  <p>You've pressed the button {{counter}} times.</p>
+<template name="ipsumForm">
+  <form class="ipsum">
+    <textarea type='text' name='text'></textarea>
+    <button type="submit">Submit</button>
+  </form>
+</template>
+
+<template name="ipsum">
+  
 </template>
