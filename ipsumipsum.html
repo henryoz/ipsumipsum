@@ -7,15 +7,22 @@
   <h2>An ipsum generator generator!</h2>
 
   {{> ipsumForm}}
+  {{> ipsums}}
 </body>
 
 <template name="ipsumForm">
   <form class="ipsum">
-    <textarea type='text' name='text'></textarea>
+    <input type="text" name="title" placeholder="Name your generator" />
+    <br />
+    <textarea type='text' name='text' placeholder="Enter phrases separated by line breaks."></textarea>
     <button type="submit">Submit</button>
   </form>
 </template>
 
 <template name="ipsums">
-  {{}}
+  <h2>There are currently {{count}} entries</h2>
+  {{#each ipsums}}
+  <p>{{title}} - {{createdAt}}</p>
+  <p>{{text}}</p>
+  {{/each}}
 </template>
