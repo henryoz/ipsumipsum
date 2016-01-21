@@ -2,10 +2,8 @@
   <title>ipsumipsum</title>
 </head>
 
-<body>
+<template name="main">
   <h1>ipsumipsum</h1>
   <h2>An ipsum generator generator!</h2>
-
-  {{> ipsumForm}}
-  {{> ipsums}}
-</body>
+  {{> yield}}
+</template>
