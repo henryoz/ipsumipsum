@@ -1,8 +1,16 @@
 <template name="ipsumForm">
-  <form class="ipsum">
-    <input type="text" name="title" placeholder="Name your generator" />
-    <br />
-    <textarea type='text' name='text' placeholder="Enter phrases separated by line breaks."></textarea>
-    <button type="submit">Submit</button>
+  <form class="ipsum col-xs-12 col-sm-8">
+    <div class="form-group">
+      <label for="generatorTitle">Title</label>
+      <input type="text" class="form-control" id="generatorTitle" name="title" placeholder="Name your generator" />
+    </div>
+    <div class="form-group">
+      <label for="generatorContent">Phrases</label>
+      <textarea type='text' class="form-control" id="generatorContent" name='text' placeholder="Enter phrases separated by line breaks."></textarea>
+    </div>
+    <div class="form-group">
+      <button class="btn btn-primary" type="submit">Submit</button>
+      <button class="btn btn-danger" type="reset" style="float:right;">Clear</button>
+    </div>
   </form>
 </template>
