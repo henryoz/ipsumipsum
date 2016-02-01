@@ -2,10 +2,11 @@
   <title>ipsumipsum</title>
 </head>
 
-<body>
-  <h1>ipsumipsum</h1>
-  <h2>An ipsum generator generator!</h2>
+<template name="main">
+  <div class="col-xs-12">
+    <h1>ipsumipsum</h1>
+    <h2>An ipsum generator generator!</h2>
+  </div>
+  {{> yield}}
 
-  {{> ipsumForm}}
-  {{> ipsums}}
-</body>
+</template>
